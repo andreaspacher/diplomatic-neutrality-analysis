@@ -1,0 +1,44 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Raw scraped text data — large, and shouldn't live in git (also often not
+# freely redistributable, since it's scraped from MOFA/gov websites).
+Data/*_mofa.jsonl
+Data/*_exec.jsonl
+
+# Derived/generated outputs — regenerate from the pipeline instead of tracking.
+Output/
+Graphs/
+Logs/
+
+# countrynames.csv is a small hand-curated correction table (not raw scraped
+# data) — worth tracking so corrections like the Campuchia/China fix aren't lost.
+# Left out of the ignore list on purpose.
+
+!Data/globaldiplomacynet/.gitkeep
+!Output/.gitkeep
+
+# Editors
+.vscode/
+.idea/
+
+# LaTeX build artifacts, if you end up drafting in this repo too
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg

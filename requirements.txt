@@ -1,0 +1,16 @@
+pandas>=2.0
+nltk>=3.8
+rapidfuzz>=3.0
+tqdm>=4.66
+pyarrow>=14.0
+matplotlib>=3.7
+statsmodels>=0.14
+
+# For ABSA scoring (09_score_absa.py) only — not needed for the core pipeline.
+# On a CPU-only VPS, consider installing the CPU-only torch wheel first to
+# avoid pulling a large CUDA build, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+transformers>=4.40
+torch>=2.0
+sentencepiece>=0.1.99
+protobuf>=3.20
